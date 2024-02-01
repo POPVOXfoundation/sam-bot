@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/sam_bot', function () {
     $client = new GuzzleHttp\Client();
     $res = $client->request('GET', 'https://sam.gov/api/prod/sgs/v1/search/?random=1649358510806&index=_all&page=0&mode=search&sort=-modifiedDate&size=25&mfe=true&is_active=true&q=&qMode=ALL&organization_id=300000003,300000002,100094131,300000001,300000004');
     $json = json_decode($res->getBody());
