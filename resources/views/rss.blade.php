@@ -3,9 +3,9 @@
 ?>
 <rss version="2.0">
     <channel>
-        <title><![CDATA[ www.popvox.com ]]></title>
-        <link><![CDATA[ https://www.popvox.com/feed ]]></link>
-        <description><![CDATA[ Some description ]]></description>
+        <title><![CDATA[ POPVOX Foundation Sam Bot ]]></title>
+        <link><![CDATA[ https://www.govtdata.org/sam_bot ]]></link>
+        <description><![CDATA[ Curated list from Sam.gov ]]></description>
         <language>en</language>
         <pubDate>{{ now() }}</pubDate>
 
