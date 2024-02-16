@@ -10,17 +10,16 @@
         <link><![CDATA[ https://www.govtdata.org/sam_bot ]]></link>
         <description><![CDATA[ Curated list from Sam.gov ]]></description>
         <dc:language>en</dc:language>
-        <pubDate>{{ now()->toDateTimeString() }}</pubDate>
-
+        <dc:date>{{ now()->toDateTimeString() }}</dc:date>
         @foreach($datapoints as $opp)
-            <item>
-                <dc:identifier><![CDATA[{{ $opp['id'] }}]]></dc:identifier>
-                <title><![CDATA[{{ $opp['name'] }}]]></title>
-                <link><![CDATA[{{ $opp['websiteUrl'] }}]]></link>
-                <dc:date><![CDATA[{{ $opp['publishDate'] }}]]></dc:date>
-                <content:solicitationNumber><![CDATA[{{ $opp['solicitationNumber'] }}]]></content:solicitationNumber>
-                <content:organization><![CDATA[{{ $opp['org'] }}]]></content:organization>
-            </item>
+        <item>
+            <dc:identifier><![CDATA[{{ $opp['id'] }}]]></dc:identifier>
+            <title><![CDATA[{{ $opp['name'] }}]]></title>
+            <link><![CDATA[{{ $opp['websiteUrl'] }}]]></link>
+            <dc:date><![CDATA[{{ $opp['publishDate'] }}]]></dc:date>
+            <content:solicitationNumber><![CDATA[{{ $opp['solicitationNumber'] }}]]></content:solicitationNumber>
+            <content:organization><![CDATA[{{ $opp['org'] }}]]></content:organization>
+        </item>
         @endforeach
     </channel>
 </rss>
