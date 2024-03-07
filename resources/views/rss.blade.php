@@ -14,9 +14,9 @@
         <pubDate>{{ now()->toRfc7231String() }}</pubDate>
         @foreach($datapoints as $opp)
         <item>
-            <dc:identifier><![CDATA[{{ $opp['id'] }}]]></dc:identifier>
             <title><![CDATA[{{ $opp['name'] }}]]></title>
             <link><![CDATA[{{ $opp['websiteUrl'] }}]]></link>
+            <guid><![CDATA[{{ $opp['id'] }}]]></guid>
             <dc:date><![CDATA[{{ $opp['publishDate'] }}]]></dc:date>
             <sam:solicitationNumber><![CDATA[{{ $opp['solicitationNumber'] }}]]></sam:solicitationNumber>
             <sam:organization><![CDATA[{{ $opp['org'] }}]]></sam:organization>
